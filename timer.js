@@ -35,6 +35,9 @@
               }
               updateTime()
         },
+        onunload() {
+          timer.remove()
+        }
     });
 
 })();
