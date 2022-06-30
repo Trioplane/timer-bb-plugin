@@ -37,6 +37,9 @@
         },
         onunload() {
           timer.remove()
+        },
+        onuninstall() {
+          timer.remove()
         }
     });
 
