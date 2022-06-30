@@ -16,6 +16,7 @@
         onload() {
             timer.setAttribute('id', 'trplnr-timer')
             document.getElementById('status_bar').appendChild(timer)
+            timer.setAttribute('style', 'position: absolute; left: -5%;')
             function updateTime() {
 
                 if (time.second == 60) {
