@@ -3,3 +3,5 @@ How to use: Just install it and it will work :), To reset the timer reopen block
 
 How to style with CSS: use the selector "#trplnr-timer"
 by trplnr
+
+DEV Branch, Using this is not recommended for normal use, only use for beta-testing
