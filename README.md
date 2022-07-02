@@ -1,7 +1,15 @@
-# Adds a timer at the status bar at the bottomof the screen so you can keep track on how long you've been in blockbench
-How to use: Just install it and it will work :), To reset the timer reopen blockbench, im planning to make a reset button in the future
+# Adds a timer at the status bar of you Blockbench screen to keep track on how long you didnt touch grass
 
-How to style with CSS: use the selector "#trplnr-timer"
-by trplnr
+# How to use:
+  Install the plugin and it will work automatically.
 
+# How do I ther reset timer?
+  Theres a button that says "Reset Timer" click it and will turn back to 0:0:0
+ 
+# How do I style it using Blockbench CSS Themes?
+  Use these CSS selectors: 
+    Timer: "#trplnr-timer"
+    Reset Button: "#trplnr-resetButton"
 
+Made by Trplnr#8852 (Discord)
+  
