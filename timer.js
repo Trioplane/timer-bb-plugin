@@ -55,10 +55,10 @@
     onunload() {
       timer.remove();
       resetButton.remove();
-      alert("unloaded/reloaded");
     },
     onuninstall() {
       timer.remove();
+      resetButton.remove();
     },
   });
 })();
