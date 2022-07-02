@@ -1,7 +1,7 @@
 (function () {
   const timer = document.createElement("p");
   const resetButton = document.createElement("button");
-  const status_bar = document.getElementById("status_abr");
+  const status_bar = document.getElementById("status_bar");
   let time = {
     hour: 0,
     minute: 0,
@@ -13,7 +13,7 @@
     author: "Trplnr",
     icon: "fa-clock",
     description:
-      "Adds a timer at the status bar at the bottomof the screen so you can keep track on how long you've been in blockbench",
+      "Adds a timer at the status bar at the bottom of the screen so you can keep track on how long you've been in blockbench",
     version: "1.0.0",
     variant: "both",
     onload() {
@@ -22,14 +22,18 @@
       //Functionality
       timer.setAttribute("id", "trplnr-timer");
       resetButton.setAttribute("id", "trplnr-resetButton");
+      resetButton.setAttribute(
+        "style",
+        "margin-inline: 3px; margin-bottom: 3px;"
+      );
       status_bar.appendChild(timer);
       resetButton.textContent = "Reset Timer";
       status_bar.appendChild(resetButton);
-      resetButton.addEventListener("click", resetTime());
-      function resetTime() {
-        timer.remove();
-        status_bar.append(timer);
-      }
+      resetButton.addEventListener("click", () => {
+        time.hour = 0;
+        time.minute = 0;
+        time.second = 0;
+      });
       function updateTime() {
         if (time.second == 60) {
           time.minute++;
@@ -50,6 +54,7 @@
     },
     onunload() {
       timer.remove();
+      resetButton.remove();
       alert("unloaded/reloaded");
     },
     onuninstall() {
