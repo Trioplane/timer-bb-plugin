@@ -1,5 +1,7 @@
 (function () {
   const timer = document.createElement("p");
+  const resetButton = document.createElement("button");
+  const status_bar = document.getElementById("status_abr");
   let time = {
     hour: 0,
     minute: 0,
@@ -15,9 +17,19 @@
     version: "1.0.0",
     variant: "both",
     onload() {
+      //Styles
+
+      //Functionality
       timer.setAttribute("id", "trplnr-timer");
-      document.getElementById("status_bar").appendChild(timer);
-      timer.setAttribute("style", "position: absolute; left: -5%;");
+      resetButton.setAttribute("id", "trplnr-resetButton");
+      status_bar.appendChild(timer);
+      resetButton.textContent = "Reset Timer";
+      status_bar.appendChild(resetButton);
+      resetButton.addEventListener("click", resetTime());
+      function resetTime() {
+        timer.remove();
+        status_bar.append(timer);
+      }
       function updateTime() {
         if (time.second == 60) {
           time.minute++;
